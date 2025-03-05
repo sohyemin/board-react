@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"; 
 
-function PostList() {
+function PostListComponent() {
     const BASE_URL = "http://localhost:8080/Board";
 
     const [posts, setPosts] = useState([]);
@@ -34,4 +34,4 @@ function PostList() {
   )
 }
 
-export default PostList
+export default PostListComponent
