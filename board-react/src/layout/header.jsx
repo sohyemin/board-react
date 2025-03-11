@@ -1,22 +1,27 @@
-import React, { Component } from 'react';
-import './header.css';
+  import React from 'react';
+  import './header.css';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default class header extends Component {
-  render() {
-    return (
-    <div className='header_wrapper'>
-      <div class="header_inner">
-        <div id="icon">
-            <a href='/'><h2>게시판</h2></a>        
-        </div>
-        <div id="write_button">
-           <button>글쓰기</button>
-        </div>
-        <div id="login_button">
-            <button> 로그인</button>
+  function Header() {
+    const navigate = useNavigate();
+
+      return (
+      <div className='header_wrapper'>
+        <div className="header_inner">
+          <div id="icon">
+              <Link to={'/'}>
+               <h2>게시판</h2>
+              </Link>        
+          </div>
+          <div id="write_button">
+            <button onClick={() => navigate('/add-Post')}>글쓰기</button>
+          </div>
+          <div id="login_button">
+              <button onClick={() => navigate('/login')}> 로그인</button>
+          </div>
         </div>
       </div>
-    </div>
-    )
+      )
   }
-}
+
+  export default Header
