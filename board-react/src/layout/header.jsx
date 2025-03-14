@@ -17,7 +17,7 @@ import { Link, useNavigate } from 'react-router-dom';
             <button onClick={() => navigate('/add-Post')}>글쓰기</button>
           </div>
           <div id="login_button">
-              <button onClick={() => navigate('/login')}> 로그인</button>
+              <a href='/login'>로그인</a>
           </div>
         </div>
       </div>
